@@ -11,15 +11,14 @@
 
     <div id="container">
         
-   
 <form class="submission-form">
     
         <label for="name">First Name</label>
-        <input type="text" name="name" id="name" placeholder="e.g Nino" required>
+        <input type="text" name="firstname" id="firstname" placeholder="e.g Nino" required>
    
    
         <label>Last Name</label>
-        <input type="text" name="last name" id="last name" placeholder="e.g Rota"  required>
+        <input type="text" name="last name" id="lastname" placeholder="e.g Rota"  required>
    
     
         <label>Address</label>
@@ -29,6 +28,7 @@
         <label>Date of Birth</label>
         <input type="date" name="date" id="date">
    
+
         <label for="gender">Gender</label>
         <select name="gender" id="gender">
         <option value="male">male</option>
@@ -40,21 +40,22 @@
         <label for="note">Note</label>
         <textarea rows="4" cols="20" id="note" name="note" placeholder="Type your note here..."></textarea>
 
+
         <button type="reset" class="resetbtn">Reset</button>
-        <button type="submit" class="submitbtn" onclick="AddRow()">Submit</button>
+        <button type="submit" class="submitbtn" onclick="Submit()">Submit</button>
 
     </form> 
 
     <div class="form-data-table">
         <h3 class="title">List of Data</h3>
-            <table id="show"> 
-                
-                    <th>#</th>
+            <table id="table"> 
+                <tr>
                     <th>FirstName</th> 
                     <th>LastName</th>
                     <th>Address</th>
                     <th>Date of Birth</th>
                     <th>Gender</th> 
+                </tr>
                     
             </table>
      </div>
