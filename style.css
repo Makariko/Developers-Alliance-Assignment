@@ -1,0 +1,110 @@
+
+body{
+    font-family:sans-serif;
+  }
+ 
+ 
+  .submission-form{
+  max-width:500px;
+  max-height: 525px;
+  margin:2rem auto;
+  border:2px solid rgb(175, 175, 158);
+  padding-left: 1.5rem;
+  padding-right: 3rem;
+ }
+
+
+label{
+  display:block;
+  padding:1rem 0 .0.3rem;
+  text-transform:uppercase;
+  font-size:14px;
+    
+}
+
+
+select{
+  display:block;
+  width: 104%;
+  border:2px solid rgb(175, 175, 158);
+  padding:.5rem;
+  font-size:18px;
+  border-radius:5px;
+}
+
+input, textarea {
+  display:block;
+  width:100%;
+  border:2px solid rgb(175, 175, 158);
+  padding:.5rem;
+  font-size:15.4px;
+  border-radius:5px;
+}
+
+.resetbtn{
+  border:0;
+  background: #2980B9;
+  padding:.3rem;
+  color:white;
+  margin-top:0rem;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s background ease;
+  }
+
+  .resetbtn:hover{
+    background: blueviolet;
+    cursor:pointer;
+  }
+
+
+.submitbtn{
+  border:0;
+  background: #2980B9;
+  padding:.3rem;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s background ease;
+ 
+}
+.submitbtn:hover{
+  background:blueviolet;
+  cursor:pointer;
+}
+
+.form-data-table{
+ margin-top: 3%;
+ margin-left: 31%;
+ max-width: 200%;
+ 
+  
+}
+
+#show{
+margin-top: -1.5%;
+width: 55%;
+padding:px;
+
+
+}
+
+.title{
+  font-size:23px;
+  font-family:sans-serif;
+}
+
+@media screen and(min-width: 500px ){
+
+}
+ 
+@media screen and(min-width: 700px ){
+
+}  
+
+@media screen and(min-width: 900px ){
+
+}  
