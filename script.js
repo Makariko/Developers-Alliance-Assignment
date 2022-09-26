@@ -62,13 +62,18 @@ function insert(readData) {
     cell4.innerHTML = readData[3];
     cell5.innerHTML = readData[4];
     
-    row.insertCell(5).innerHTML = `<button onClick="note(this)">Open Note</button>`;
-    row.insertCell(6).innerHTML = `<button onClick="remove(this)">Delete </button>`;
+    row.insertCell(5).innerHTML = `<button id = "notebtn" onClick="note(this)">Open Note</button>`;
+    row.insertCell(6).innerHTML = `<button id ="deletbtn" onClick="remove(this)">Delete </button >`;
 }
+
+
+
+//delete and note buttons
 
 function remove(td) {
     row = td.parentElement.parentElement;
     document.getElementById("table").deleteRow(row.rowIndex);
+    
 }
 
 
@@ -77,4 +82,5 @@ function note(td) {
 
     alert (note);
 }
+
 
