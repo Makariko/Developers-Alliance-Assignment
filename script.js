@@ -1,7 +1,7 @@
 function Submit() {
     var dataEntered = retrieveData();
     var readData = readingDataFromLocalStorage(dataEntered);
-    insert(readData)
+    insert(readData);
 }
 
 function retrieveData() {
@@ -10,11 +10,13 @@ function retrieveData() {
     var address = document.getElementById("address").value;
     var date = document.getElementById("date").value;
     var gender = document.getElementById("gender").value;
+    var note = document.getElementById("note").value;
 
 
-    var arr = [firstName, lastName, address, date, gender];
+    var arr = [firstName, lastName, address, date, gender, note];
     return arr;
 }
+
 
 //data in LocalStorage
 function readingDataFromLocalStorage(dataEntered) {
@@ -23,7 +25,7 @@ var lname = localStorage.setItem("lastname", dataEntered[1]);
 var addr = localStorage.setItem("address", dataEntered[2]);
 var dat = localStorage.setItem("date", dataEntered[3]);
 var gend = localStorage.setItem("gender", dataEntered[4]);
-
+var not = localStorage.setItem("note", dataEntered[5]);
 
 
 
@@ -34,9 +36,10 @@ var l = localStorage.getItem("lastname", lname);
 var ad = localStorage.getItem("address", addr);
 var da = localStorage.getItem("date", dat);
 var gen = localStorage.getItem("gender", gend);
+var nt = localStorage.getItem("note", not);
 
 
-var arr = [n, l, ad, da, gen];
+var arr = [n, l, ad, da, gen, nt];
 return arr;
 
 }
@@ -59,8 +62,8 @@ function insert(readData) {
     cell4.innerHTML = readData[3];
     cell5.innerHTML = readData[4];
     
-    row.insertCell(5).innerHTML = `<button onClick="remove(this)">Delete </button>`;
-    row.insertCell(6).innerHTML = `<button>Note</button>`;
+    row.insertCell(5).innerHTML = `<button onClick="note(this)">Open Note</button>`;
+    row.insertCell(6).innerHTML = `<button onClick="remove(this)">Delete </button>`;
 }
 
 function remove(td) {
@@ -69,5 +72,9 @@ function remove(td) {
 }
 
 
+function note(td) {
+    var note = document.getElementById("note").value;
 
+    alert (note);
+}
 
