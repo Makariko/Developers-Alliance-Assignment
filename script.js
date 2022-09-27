@@ -3,8 +3,10 @@ function Submit() {
     var readData = readingDataFromLocalStorage(dataEntered);
     insert(readData);
 
+    // prevent reloads when submitting
     event.preventDefault();
 }
+
 
 function retrieveData() {
     var firstName = document.getElementById("firstname").value;
@@ -57,7 +59,7 @@ function insert(readData) {
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
 
-
+    
     cell1.innerHTML = readData[0];
     cell2.innerHTML = readData[1];
     cell3.innerHTML = readData[2];
@@ -71,6 +73,9 @@ function insert(readData) {
 
 
 //delete and note buttons
+
+
+
 
 function remove(td) {
     row = td.parentElement.parentElement;
