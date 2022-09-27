@@ -2,6 +2,8 @@ function Submit() {
     var dataEntered = retrieveData();
     var readData = readingDataFromLocalStorage(dataEntered);
     insert(readData);
+
+    event.preventDefault();
 }
 
 function retrieveData() {
