@@ -1,10 +1,15 @@
+
 function Submit() {
     var dataEntered = retrieveData();
     var readData = readingDataFromLocalStorage(dataEntered);
+    if(dataEntered == false) {
+        alert('Please Enter Your First Name, Last Name and Address!');
+    }
+    
+    else {
     insert(readData);
-
-    // prevent reloads when submitting
-    event.preventDefault();
+    }
+ 
 }
 
 
@@ -15,10 +20,19 @@ function retrieveData() {
     var date = document.getElementById("date").value;
     var gender = document.getElementById("gender").value;
     var note = document.getElementById("note").value;
+    
 
 
     var arr = [firstName, lastName, address, date, gender, note];
+   
+    //Required Fields 
+    if (arr[0]==(""), arr[1]==(""), arr[2]==("")){
+        return false;
+    }
+    else{
     return arr;
+    }
+   
 }
 
 
@@ -74,15 +88,11 @@ function insert(readData) {
 
 //delete and note buttons
 
-
-
-
 function remove(td) {
     row = td.parentElement.parentElement;
     document.getElementById("table").deleteRow(row.rowIndex);
     
 }
-
 
 function note(td) {
     var note = document.getElementById("note").value;
@@ -90,4 +100,8 @@ function note(td) {
     alert (note);
 }
 
-
+//FirstName and LastName Validations
+function lettersOnly(input){
+    var regex = /[^a-z]/gi;
+    input.value = input.value.replace(regex,"");
+}
