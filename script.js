@@ -1,16 +1,24 @@
+//prevent form from refreshing
+function func (e){
+    event.preventDefault()
+
+}
+
 
 function Submit() {
+    
     var dataEntered = retrieveData();
     var readData = readingDataFromLocalStorage(dataEntered);
     if(dataEntered == false) {
         alert('Please Enter Your First Name, Last Name and Address!');
     }
-    
     else {
+
     insert(readData);
     }
  
 }
+
 
 
 function retrieveData() {
@@ -105,3 +113,4 @@ function lettersOnly(input){
     var regex = /[^a-z]/gi;
     input.value = input.value.replace(regex,"");
 }
+
