@@ -1,16 +1,24 @@
+//prevent form from refreshing
+function func (e){
+    event.preventDefault()
+
+}
+
 
 function Submit() {
+    
     var dataEntered = retrieveData();
     var readData = readingDataFromLocalStorage(dataEntered);
     if(dataEntered == false) {
-        alert('Please Enter Your First Name, Last Name and Address!');
+        alert('Requierd Field is empty!');
     }
-    
     else {
+
     insert(readData);
     }
  
 }
+
 
 
 function retrieveData() {
@@ -63,9 +71,11 @@ return arr;
 }
 
 
-//inserting in the table
+//Inserting in the table
 
 function insert(readData) {
+    var tabl = document.getElementById("table");
+    
     var row = table.insertRow(); 
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
@@ -105,3 +115,4 @@ function lettersOnly(input){
     var regex = /[^a-z]/gi;
     input.value = input.value.replace(regex,"");
 }
+
