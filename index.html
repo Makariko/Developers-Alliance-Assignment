@@ -10,18 +10,22 @@
 <body> 
 
     <div id="container">
-        
-<form class="submission-form">
+
+        <div class="row justify-content-center my-5">
+            <small>* - Required</small>
+            <div class="col-lg-6">
+
+<form id = form class="submission-form" onsubmit="func()">
     
-        <label for="name">First Name</label>
-        <input type="text" name="firstname" id="firstname" placeholder="e.g Nino" required>
+        <label for="name">* First Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="e.g Nino" required onkeyup="lettersOnly (this)">
    
    
-        <label>Last Name</label>
-        <input type="text" name="last name" id="lastname" placeholder="e.g Rota"  required>
+        <label>* Last Name</label>
+        <input type="text" name="last name" id="lastname" placeholder="e.g Rota"  required onkeyup="lettersOnly (this)">
    
     
-        <label>Address</label>
+        <label>* Address</label>
         <input type="text" name="address" id="address" placeholder="Enter your Address here"  maxlength="35" required>
     
   
@@ -58,12 +62,17 @@
                     <th>Notes</th> 
                     <th>Delete</th> 
 
-                </tr>            
+                </tr>   
+                     
             </table>
+            <script>
+                insert(readData) ;
+                  </script> 
         </div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
